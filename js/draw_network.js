@@ -457,7 +457,7 @@ function draw() {
     ];
 
     // create a network
-    var container = document.getElementById('mynetwork');
+    var container = document.getElementById('my_software_eng_skills');
     var data = {
         nodes: nodes,
         edges: edges
