@@ -6,455 +6,333 @@ var network = null;
 
 // Called when the Visualization API is loaded.
 function draw() {
-    var DIR = 'img/';
     nodes = [{
-            id: 1,
-            image: DIR + 'python_language.png',
-            label: "Python",
-            group: "Programação"
+            "id": 1,
+            "image": 'python_language.png',
+            "label": "Python",
+            "group": "Programação"
         },{
-            id: 2,
-            image: DIR + 'bash_language.png',
-            label: "Bash Script",
-            group: "Programação"
+            "id": 2,
+            "image": 'bash_language.png',
+            "label": "Bash Script",
+            "group": "Programação"
         },{
-            id: 3,
-            image: DIR + 'javascript_language.png',
-            label: "Javascript",
-            group: "Programação"
+            "id": 3,
+            "image": 'javascript_language.png',
+            "label": "Javascript",
+            "group": "Programação"
         },{
-            id: 4,
-            image: DIR + 'java_language.jpg',
-            label: "Java",
-            group: "Programação"
+            "id": 4,
+            "image": 'java_language.jpg',
+            "label": "Java",
+            "group": "Programação"
         },{
-            id: 5,
-            image: DIR + 'php_language.jpg',
-            label: "PHP",
-            group: "Programação"
+            "id": 5,
+            "image": 'php_language.jpg',
+            "label": "PHP",
+            "group": "Programação"
         },{
-            id: 6,
-            image: DIR + 'cpp_language.png',
-            label: "C/C++",
-            group: "Programação"
+            "id": 6,
+            "image": 'cpp_language.png',
+            "label": "C/C++",
+            "group": "Programação"
         },{
-            id: 8,
-            image: DIR + 'devops.png',
-            label: "Cultura DevOps",
-            group: "Gerência de Configuração de Software"
-        },{
-            id: 9,
-            image: DIR + 'django_framework.png',
-            label: "Django Framework",
-            group: "Programação"
-        },{
-            id: 10,
-            image: DIR + 'drf.png',
-            label: "Django Rest (DRF)",
-            group: "Programação"
-        },{
-            id: 11,
-            image: DIR + 'brain.png',
-            label: "Programação Defensiva",
-            group: "Qualidade de Software"
-        },{
-            id: 12,
-            image: DIR + 'brain.png',
-            label: "Técnicas de Programação",
-            group: "Qualidade de Software"
-        },{
-            id: 13,
-            image: DIR + 'brain.png',
-            label: "Testes Unitários",
-            group: "Qualidade de Software"
-        },{
-            id: 14,
-            image: DIR + 'brain.png',
-            label: "Testes de Integração",
-            group: "Qualidade de Software"
-        },{
-            id: 15,
-            image: DIR + 'brain.png',
-            label: "Testes de Carga",
-            group: "Qualidade de Software"
-        },{
-            id: 16,
-            image: DIR + 'brain.png',
-            label: "Testes de Stress",
-            group: "Qualidade de Software"
-        },{
-            id: 17,
-            image: DIR + 'mysql.jpg',
-            label: "MySQL",
-            group: "Banco de Dados"
-        },{
-            id: 18,
-            image: DIR + 'RabbitMQ.jpg',
-            label: "RabbitMQ",
-            group: "Programação"
-        },{
-            id: 19,
-            image: DIR + 'mongodb.png',
-            label: "MongoDB",
-            group: "Banco de Dados"
-        },{
-            id: 20,
-            image: DIR + 'couchdb.png',
-            label: "CouchDB",
-            group: "Banco de Dados"
-        },{
-            id: 21,
-            image: DIR + 'node_js.jpg',
-            label: "NodeJs",
-            group: "Programação"
-        },{
-            id: 22,
-            image: DIR + 'git.png',
-            label: "Git",
-            group: "Gerência de Configuração de Software"
-        },{
-            id: 23,
-            image: DIR + 'github.png',
-            label: "GitHub",
-            group: "Gerência de Configuração de Software"
-        },{
-            id: 24,
-            image: DIR + 'gitlab.png',
-            label: "GitLab",
-            group: "Gerência de Configuração de Software"
-        },{
-            id: 25,
-            image: DIR + 'ssh.png',
-            label: "SSH tools",
-            group: "Gerência de Configuração de Software"
-        },{
-            id: 26,
-            image: DIR + 'docker.png',
-            label: "Docker",
-            group: "Gerência de Configuração de Software"
-        },{
-            id: 27,
-            image: DIR + 'travis_ci.png',
-            label: "TravisCI",
-            group: "Gerência de Configuração de Software"
-        },{
-            id: 28,
-            image: DIR + 'brain.png',
-            label: "BeautifulSoup",
-            group: "Programação"
-        },{
-            id: 29,
-            image: DIR + 'css.png',
-            label: "CSS",
-            group: "Front-End"
-        },{
-            id: 30,
-            image: DIR + 'soupUI_tool.jpg',
-            label: "SoapUI",
-            group: "Qualidade de Software"
-        },{
-            id: 31,
-            image: DIR + 'uml2.png',
-            label: "UML",
-            group: "Requisitos"
-        },{
-            id: 32,
-            image: DIR + 'gcs.png',
-            label: "Gerência de Configuração de Software",
-            group: "Gerência de Configuração de Software"
-        },{
-            id: 33,
-            image: DIR + 'brain.png',
-            label: "Qualidade de Software",
-            group: "Qualidade de Software"
-        },{
-            id: 34,
-            image: DIR + 'postgres.png',
-            label: "Postgres",
-            group: "Banco de Dados"
-        },{
-            id: 35,
-            image: DIR + 'sdl.png',
-            label: "SDL",
-            group: "Programação"
-        },{
-            id: 36,
-            image: DIR + 'brain.png',
-            label: "Metodologias Ágeis",
-            group: "Metodologias"
-        },{
-            id: 37,
-            image: DIR + 'requirements_analysis.jpg',
-            label: "Análise de Requisitos",
-            group: "Requisitos"
-        },{
-            id: 38,
-            image: DIR + 'bpmn.png',
-            label: "Modelagem BPMN",
-            group: "Requisitos"
-        },{
-            id: 39,
-            image: DIR + 'brain.png',
-            label: "Melhoria de processos",
-            group: "Requisitos"
-        },{
-            id: 40,
-            image: DIR + 'scrum.png',
-            label: "Scrum",
-            group: "Metodologias"
-        },{
-            id: 41,
-            image: DIR + 'xp_agile.jpg',
-            label: "XP",
-            group: "Metodologias"
-        },{
-            id: 42,
-            image: DIR + 'safe_agile.png',
-            label: "SAFe",
-            group: "Metodologias"
-        },{
-            id: 43,
-            image: DIR + 'rational_up.jpg',
-            label: "Rational Unified Process (RUP)",
-            group: "Metodologias"
-        },{
-            id: 44,
-            image: DIR + 'brain.png',
-            label: "Metodologias de desenvolvimento de Software",
-            group: "Metodologias",
-            x: 0,
-            y: 0,
-            fixed: {
-                x: true,
-                y: true
+            "id": 7,
+            "image": 'brain.png',
+            "label": "Metodologias de desenvolvimento de Software",
+            "group": "Metodologias",
+            "x": 0,
+            "y": 0,
+            "fixed": {
+                "x": true,
+                "y": true
             }
         },{
-            id: 45,
-            image: DIR + 'html.png',
-            label: "HTML",
-            group: "Front-End"
+            "id": 8,
+            "image": 'devops.png',
+            "label": "Cultura DevOps",
+            "group": "Gerência de Configuração de Software"
         },{
-            id: 46,
-            image: DIR + 'brain.png',
-            label: "Orientação a Objetos",
-            group: "Programação"
+            "id": 9,
+            "image": 'django_framework.png',
+            "label": "Django Framework",
+            "group": "Programação"
         },{
-            id: 47,
-            image: DIR + 'kanban.jpg',
-            label: "Kanban",
-            group: "Metodologias"
+            "id": 10,
+            "image": 'drf.png',
+            "label": "Django Rest (DRF)",
+            "group": "Programação"
         },{
-            id: 48,
-            image: DIR + 'brain.png',
-            label: "Front-End",
-            group: "Front-End"
+            "id": 11,
+            "image": 'brain.png',
+            "label": "Programação Defensiva",
+            "group": "Qualidade de Software"
         },{
-            id: 49,
-            image: DIR + 'sqlite.png',
-            label: "Sqlite",
-            group: "Banco de Dados"
+            "id": 12,
+            "image": 'brain.png',
+            "label": "Técnicas de Programação",
+            "group": "Qualidade de Software"
         },{
-            id: 50,
-            image: DIR + 'junit.jpg',
-            label: "JUnit",
-            group: "Qualidade de Software"
+            "id": 13,
+            "image": 'brain.png',
+            "label": "Testes Unitários",
+            "group": "Qualidade de Software"
+        },{
+            "id": 14,
+            "image": 'brain.png',
+            "label": "Testes de Integração",
+            "group": "Qualidade de Software"
+        },{
+            "id": 15,
+            "image": 'brain.png',
+            "label": "Testes de Carga",
+            "group": "Qualidade de Software"
+        },{
+            "id": 16,
+            "image": 'brain.png',
+            "label": "Testes de Stress",
+            "group": "Qualidade de Software"
+        },{
+            "id": 17,
+            "image": 'mysql.jpg',
+            "label": "MySQL",
+            "group": "Banco de Dados"
+        },{
+            "id": 18,
+            "image": 'RabbitMQ.jpg',
+            "label": "RabbitMQ",
+            "group": "Programação"
+        },{
+            "id": 19,
+            "image": 'mongodb.png',
+            "label": "MongoDB",
+            "group": "Banco de Dados"
+        },{
+            "id": 20,
+            "image": 'couchdb.png',
+            "label": "CouchDB",
+            "group": "Banco de Dados"
+        },{
+            "id": 21,
+            "image": 'node_js.jpg',
+            "label": "NodeJs",
+            "group": "Programação"
+        },{
+            "id": 22,
+            "image": 'git.png',
+            "label": "Git",
+            "group": "Gerência de Configuração de Software"
+        },{
+            "id": 23,
+            "image": 'github.png',
+            "label": "GitHub",
+            "group": "Gerência de Configuração de Software"
+        },{
+            "id": 24,
+            "image": 'gitlab.png',
+            "label": "GitLab",
+            "group": "Gerência de Configuração de Software"
+        },{
+            "id": 25,
+            "image": 'ssh.png',
+            "label": "SSH tools",
+            "group": "Gerência de Configuração de Software"
+        },{
+            "id": 26,
+            "image": 'docker.png',
+            "label": "Docker",
+            "group": "Gerência de Configuração de Software"
+        },{
+            "id": 27,
+            "image": 'travis_ci.png',
+            "label": "TravisCI",
+            "group": "Gerência de Configuração de Software"
+        },{
+            "id": 28,
+            "image": 'brain.png',
+            "label": "BeautifulSoup",
+            "group": "Programação"
+        },{
+            "id": 29,
+            "image": 'css.png',
+            "label": "CSS",
+            "group": "Front-End"
+        },{
+            "id": 30,
+            "image": 'soupUI_tool.jpg',
+            "label": "SoapUI",
+            "group": "Qualidade de Software"
+        },{
+            "id": 31,
+            "image": 'uml2.png',
+            "label": "UML",
+            "group": "Requisitos"
+        },{
+            "id": 32,
+            "image": 'gcs.png',
+            "label": "Gerência de Configuração de Software",
+            "group": "Gerência de Configuração de Software"
+        },{
+            "id": 33,
+            "image": 'brain.png',
+            "label": "Qualidade de Software",
+            "group": "Qualidade de Software"
+        },{
+            "id": 34,
+            "image": 'postgres.png',
+            "label": "Postgres",
+            "group": "Banco de Dados"
+        },{
+            "id": 35,
+            "image": 'sdl.png',
+            "label": "SDL",
+            "group": "Programação"
+        },{
+            "id": 36,
+            "image": 'brain.png',
+            "label": "Metodologias Ágeis",
+            "group": "Metodologias"
+        },{
+            "id": 37,
+            "image": 'requirements_analysis.jpg',
+            "label": "Análise de Requisitos",
+            "group": "Requisitos"
+        },{
+            "id": 38,
+            "image": 'bpmn.png',
+            "label": "Modelagem BPMN",
+            "group": "Requisitos"
+        },{
+            "id": 39,
+            "image": 'brain.png',
+            "label": "Melhoria de processos",
+            "group": "Requisitos"
+        },{
+            "id": 40,
+            "image": 'scrum.png',
+            "label": "Scrum",
+            "group": "Metodologias"
+        },{
+            "id": 41,
+            "image": 'xp_agile.jpg',
+            "label": "XP",
+            "group": "Metodologias"
+        },{
+            "id": 42,
+            "image": 'safe_agile.png',
+            "label": "SAFe",
+            "group": "Metodologias"
+        },{
+            "id": 43,
+            "image": 'rational_up.jpg',
+            "label": "Rational Unified Process (RUP)",
+            "group": "Metodologias"
+        },{
+            "id": 44,
+            "image": 'junit.jpg',
+            "label": "JUnit",
+            "group": "Qualidade de Software"
+        },{
+            "id": 45,
+            "image": 'html.png',
+            "label": "HTML",
+            "group": "Front-End"
+        },{
+            "id": 46,
+            "image": 'brain.png',
+            "label": "Orientação a Objetos",
+            "group": "Programação"
+        },{
+            "id": 47,
+            "image": 'kanban.jpg',
+            "label": "Kanban",
+            "group": "Metodologias"
+        },{
+            "id": 48,
+            "image": 'brain.png',
+            "label": "Front-End",
+            "group": "Front-End"
+        },{
+            "id": 49,
+            "image": 'sqlite.png',
+            "label": "Sqlite",
+            "group": "Banco de Dados"
         }
     ];
 
+    var DIR = 'img/';
     for (var i = nodes.length - 1; i >= 0; i--) {
-      nodes[i].shape = 'circularImage';
-      nodes[i].brokenImage = DIR + 'brain.png';
+        nodes[i].shape = 'circularImage';
+        nodes[i].image = DIR + nodes[i].image;
+        nodes[i].brokenImage = DIR + 'brain.png';
     }
-    // create connections between people
-    // value corresponds with the amount of contact between two people
-    edges = [{
-            from: 2,
-            to: 8
-        },{
-            from: 33,
-            to: 11
-        },{
-            from: 18,
-            to: 1
-        },{
-            from: 35,
-            to: 6
-        },{
-            from: 18,
-            to: 3
-        },{
-            from: 12,
-            to: 11
-        },{
-            from: 33,
-            to: 12
-        },{
-            from: 33,
-            to: 13
-        },{
-            from: 33,
-            to: 14
-        },{
-            from: 17,
-            to: 4
-        },{
-            from: 33,
-            to: 15
-        },{
-            from: 33,
-            to: 16
-        },{
-            from: 32,
-            to: 22
-        },{
-            from: 46,
-            to: 1
-        },{
-            from: 5,
-            to: 17
-        },{
-            from: 46,
-            to: 3
-        },{
-            from: 46,
-            to: 4
-        },{
-            from: 46,
-            to: 5
-        },{
-            from: 46,
-            to: 6
-        },{
-            from: 32,
-            to: 2
-        },{
-            from: 48,
-            to: 45
-        },{
-            from: 48,
-            to: 29
-        },{
-            from: 48,
-            to: 3
-        },{
-            from: 48,
-            to: 5
-        },{
-            from: 1,
-            to: 9
-        },{
-            from: 1,
-            to: 10
-        },{
-            from: 44,
-            to: 43
-        },{
-            from: 44,
-            to: 36
-        },{
-            from: 37,
-            to: 31
-        },{
-            from: 37,
-            to: 38
-        },{
-            from: 37,
-            to: 39
-        },{
-            from: 37,
-            to: 44
-        },{
-            from: 27,
-            to: 8
-        },{
-            from: 22,
-            to: 23
-        },{
-            from: 22,
-            to: 24
-        },{
-            from: 33,
-            to: 44
-        },{
-            from: 8,
-            to: 26
-        },{
-            from: 21,
-            to: 3
-        },{
-            from: 21,
-            to: 19
-        },{
-            from: 30,
-            to: 14
-        },{
-            from: 30,
-            to: 16
-        },{
-            from: 8,
-            to: 36
-        },{
-            from: 36,
-            to: 40
-        },{
-            from: 36,
-            to: 41
-        },{
-            from: 36,
-            to: 47
-        },{
-            from: 36,
-            to: 42
-        },{
-            from: 19,
-            to: 3
-        },{
-            from: 2,
-            to: 25
-        },{
-            from: 32,
-            to: 8
-        },{
-            from: 27,
-            to: 26
-        },{
-            from: 29,
-            to: 45
-        },{
-            from: 28,
-            to: 1
-        },{
-            from: 9,
-            to: 10
-        },{
-            from: 5,
-            to: 34
-        },{
-            from: 9,
-            to: 34
-        },{
-            from: 44,
-            to: 48
-        },{
-            from: 44,
-            to: 32
-        },{
-            from: 30,
-            to: 20
-        },{
-            from: 49,
-            to: 9
-        },{
-            from: 49,
-            to: 10
-        },{
-            from: 4,
-            to: 50
-        },{
-            from: 13,
-            to: 50
-        }
-    ];
+
+    // create connections between knowledge
+    // value corresponds with the amount of contact between two knowledge
+    edges = [
+        {"from": 1, "to": 18},
+         {"from": 1, "to": 28},
+         {"from": 1, "to": 46},
+         {"from": 1, "to": 9},
+         {"from": 1, "to": 10},
+         {"from": 2, "to": 8},
+         {"from": 2, "to": 25},
+         {"from": 2, "to": 32},
+         {"from": 3, "to": 19},
+         {"from": 3, "to": 48},
+         {"from": 3, "to": 46},
+         {"from": 3, "to": 18},
+         {"from": 3, "to": 21},
+         {"from": 4, "to": 44},
+         {"from": 4, "to": 46},
+         {"from": 4, "to": 17},
+         {"from": 5, "to": 48},
+         {"from": 5, "to": 46},
+         {"from": 5, "to": 34},
+         {"from": 5, "to": 17},
+         {"from": 6, "to": 35},
+         {"from": 6, "to": 46},
+         {"from": 7, "to": 43},
+         {"from": 7, "to": 36},
+         {"from": 7, "to": 37},
+         {"from": 7, "to": 33},
+         {"from": 7, "to": 48},
+         {"from": 7, "to": 32},
+         {"from": 8, "to": 27},
+         {"from": 8, "to": 36},
+         {"from": 8, "to": 26},
+         {"from": 8, "to": 32},
+         {"from": 9, "to": 10},
+         {"from": 9, "to": 49},
+         {"from": 9, "to": 34},
+         {"from": 10, "to": 49},
+         {"from": 11, "to": 33},
+         {"from": 11, "to": 12},
+         {"from": 12, "to": 33},
+         {"from": 13, "to": 33},
+         {"from": 13, "to": 44},
+         {"from": 14, "to": 33},
+         {"from": 14, "to": 30},
+         {"from": 15, "to": 33},
+         {"from": 16, "to": 33},
+         {"from": 16, "to": 30},
+         {"from": 19, "to": 21},
+         {"from": 20, "to": 30},
+         {"from": 22, "to": 23},
+         {"from": 22, "to": 24},
+         {"from": 22, "to": 32},
+         {"from": 26, "to": 27},
+         {"from": 29, "to": 45},
+         {"from": 29, "to": 48},
+         {"from": 31, "to": 37},
+         {"from": 36, "to": 40},
+         {"from": 36, "to": 41},
+         {"from": 36, "to": 47},
+         {"from": 36, "to": 42},
+         {"from": 37, "to": 38},
+         {"from": 37, "to": 39},
+         {"from": 45, "to": 48}
+         ];
 
     // create a network
     var container = document.getElementById('my_software_eng_skills');
