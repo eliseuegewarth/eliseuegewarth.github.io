@@ -257,6 +257,11 @@ function draw() {
             "image": 'sqlite.png',
             "label": "Sqlite",
             "group": "Banco de Dados"
+        },{
+            "id": 50,
+            "image": 'oracle.png',
+            "label": "Oracle",
+            "group": "Banco de Dados"
         }
     ];
 
@@ -331,7 +336,8 @@ function draw() {
          {"from": 36, "to": 42},
          {"from": 37, "to": 38},
          {"from": 37, "to": 39},
-         {"from": 45, "to": 48}
+         {"from": 45, "to": 48},
+         {"from": 50, "to": 9}
          ];
 
     // create a network
